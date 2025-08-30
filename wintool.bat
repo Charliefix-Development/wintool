@@ -18,14 +18,12 @@ cls
 set "menu_choice=null"
 echo %UL%
 echo 1. Windows maintenance
-echo 2. Network actions
-echo 3. Get weather forecast
+echo 2. Get weather forecast
 echo 0. Exit
 set /p menu_choice=%EC% (0-8): 
 
 if "%menu_choice%"=="1" goto windows_maintenance
-if "%menu_choice%"=="2" goto network_actions
-if "%menu_choice%"=="3" goto weather_forecast
+if "%menu_choice%"=="2" goto weather_forecast
 if "%menu_choice%"=="0" exit /b
 goto menu
 
@@ -35,10 +33,12 @@ cls
 set "menu_choice=null"
 echo =======================
 echo 1. Clean cache
+echo 2. Network Actions
 echo 0. Go back
 set /p menu_choice=%EC% (0-8): 
 
 if "%menu_choice%"=="1" goto clean_cache
+if "%menu_choice%"=="2" goto network_actions
 if "%menu_choice%"=="0" goto menu
 goto windows_maintenance
 
