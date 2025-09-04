@@ -47,6 +47,7 @@ cls
 echo please confirm that you are going to run this at your own risk
 pause
 echo Seriously, this is your last warning!
+pause
 DEL /F /S /Q %WINDIR%\Temp\*.*
 echo Cleaning %WINDIR%\Temp...
 DEL /F /S /Q %SYSTEMDRIVE%\Temp\*.*
@@ -58,9 +59,6 @@ echo Cleaning %Tmp%...
 
 DEL /F /S /Q %WINDIR%\Prefetch\*.*
 echo Cleaning %WINDIR%\Prefetch...
-
-sfc /purgecache
-echo Purging sfc's cache...
 
 echo Cleaning another cache files...
 taskkill /f /im explorer.exe
@@ -75,7 +73,7 @@ DEL /f /s /q %systemdrive%\recycled\*.*
 DEL /f /s /q %windir%\*.bak
 DEL /f /s /q %windir%\prefetch\*.*
 rd /s /q %windir%\temp & md %windir%\temp
-DEL /f /q %userprofile%\cookies\*.*
+
 DEL /f /q %userprofile%\recent\*.*
 DEL /f /s /q "%userprofile%\Local Settings\Temporary Internet Files\*.*"
 DEL /f /s /q "%userprofile%\Local Settings\Temp\*.*"
